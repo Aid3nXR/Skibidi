@@ -1,6 +1,5 @@
-// i.js
 window.addEventListener("load", () => {
-  navigator.serviceWorker.register("../sw.js?v=2025-04-15", {
+  navigator.serviceWorker.register("../sw.js?v=10-02-2024", {
     scope: "/a/",
   });
 });
@@ -8,10 +7,10 @@ window.addEventListener("load", () => {
 let xl;
 
 try {
-  xl = window.top.location.pathname === "/d";
+  xl = window.top.location.pathname === "/rx";
 } catch {
   try {
-    xl = window.parent.location.pathname === "/d";
+    xl = window.parent.location.pathname === "/rx";   
   } catch {
     xl = false;
   }
@@ -25,9 +24,9 @@ if (form && input) {
     event.preventDefault();
     try {
       if (xl) processUrl(input.value, "");
-      else processUrl(input.value, "/d");
+      else processUrl(input.value, "/rx");
     } catch {
-      processUrl(input.value, "/d");
+      processUrl(input.value, "/rx");
     }
   });
 }
@@ -55,7 +54,7 @@ function processUrl(value, path) {
 }
 
 function go(value) {
-  processUrl(value, "/d");
+  processUrl(value, "/rx");
 }
 
 function blank(value) {

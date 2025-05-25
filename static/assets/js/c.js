@@ -1,16 +1,15 @@
-// c.js
 let appInd;
-const g = window.location.pathname === "/a";
-const a = window.location.pathname === "/b";
+const g = window.location.pathname === "/up";
+const a = window.location.pathname === "/yz";
 const c = window.location.pathname === "/gt";
 
 let t;
 
 try {
-  t = window.top.location.pathname === "/d";
+  t = window.top.location.pathname === "/rx";
 } catch {
   try {
-    t = window.parent.location.pathname === "/d";
+    t = window.parent.location.pathname === "/rx";   
   } catch {
     t = false;
   }
